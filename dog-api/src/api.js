@@ -1,7 +1,3 @@
-import Dog from './dog';
-import Render from './render'
-
-let url = 'https://api.thecatapi.com/v1/breeds';
 const api_key = "DEMO_API_KEY";
 
 let options = {
@@ -11,23 +7,23 @@ let options = {
     }
 }
 
-function fetchData() {
+function fetchData(url) {
     console.log("Im inside fetchdata");
-    fetch(url, options)
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data);
-        data.forEach(indiviualData => {
-            let name = indiviualData.name;
-            let country = indiviualData.country_code;
-            let weight = indiviualData.weight.metric;
-            let dog = new Dog(name, country, weight);
+    return fetch(url, options)
+    //.then(response => response.json())
+    // .then(data => {
+    //     //console.log(data);
+    //     data.forEach(indiviualData => {
+    //         let name = indiviualData.name;
+    //         let country = indiviualData.country_code;
+    //         let weight = indiviualData.weight.metric;
+    //         let dog = new Dog(name, country, weight);
 
-            console.log(dog);
-            Render(dog);
-        });
+    //         console.log(dog);
+    //         Render(dog);
+    //     });
 
-    });
+    // });
 }
 
 function displayCountryCode(obj) {
