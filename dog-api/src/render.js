@@ -8,10 +8,10 @@ function render(obj) {
     h1_objName.innerHTML = `${obj.name}`;
 
     const p_countryCode = document.createElement('p');
-    p_countryCode.innerHTML = `${obj.countryCode}`;
+    p_countryCode.innerHTML = `Country: ${obj.countryCode}`;
 
     const p_weight = document.createElement('p');
-    p_weight.innerHTML = `${obj.weight}`;
+    p_weight.innerHTML = `Weight: (${obj.weight}) lbs`;
 
     dogDiv.appendChild(h1_objName);
     dogDiv.appendChild(p_countryCode);
